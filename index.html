@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Actividades</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Incluimos Bootstrap para algunos estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Incluimos Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container my-5">
+        <header class="text-center mb-5">
+            <h1 class="display-4"><i class="fas fa-calendar-alt me-2"></i>Calendario de Actividades</h1>
+            <p class="lead">Todas nuestras actividades programadas para este año</p>
+            <div class="d-flex justify-content-center">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="modoOscuro">
+                    <label class="form-check-label" for="modoOscuro">Modo oscuro</label>
+                </div>
+            </div>
+        </header>
+
+        <div class="row mb-4">
+            <div class="col-md-6 mx-auto">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                    <input type="text" id="buscador" class="form-control" placeholder="Buscar actividades...">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center gap-2" id="filtros-categorias">
+                    <!-- Los filtros se generarán con JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="contenedor-actividades">
+            <!-- Las actividades se cargarán aquí con JavaScript -->
+        </div>
+
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-primary" id="btnScrollTop">
+                <i class="fas fa-arrow-up"></i> Volver arriba
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center p-4 mt-5">
+        <p>Calendario actualizado el: <span id="fecha-actualizacion"></span></p>
+        <p>© 2023 - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
